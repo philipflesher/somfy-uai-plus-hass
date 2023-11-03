@@ -1,0 +1,12 @@
+{
+    "domain": "somfy_uai_plus",
+    "name": "Somfy UAI+",
+    "dependencies": [],
+    "after_dependencies": [],
+    "requirements": [
+        "git+https://github.com/philipflesher/somfy-uai-plus-telnet-py@main#somfy-uai-plus-telnet==0.4.0"
+    ],
+    "iot_class": "local_polling",
+    "version": "0.1.0",
+    "config_flow": true
+}

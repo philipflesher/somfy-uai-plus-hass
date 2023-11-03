@@ -1,0 +1,69 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Device is already configured",
+            "unknown": "Unexpected error"
+        },
+        "error": {
+            "cannot_connect": "Failed to connect to provided hostname",
+            "invalid_host": "Invalid hostname",
+            "invalid_username": "Invalid username",
+            "invalid_password": "Invalid password",
+            "unknown": "Unexpected error"
+        },
+        "step": {
+            "init": {
+                "title": "Add Somfy UAI+",
+                "description": "Connect to a UAI+ by entering the hostname or IP address of its telnet interface and a username and password.",
+                "data": {
+                    "host": "Host",
+                    "username": "Username",
+                    "password": "Password"
+                },
+                "data_description": {
+                    "host": "hostname or IP address of telnet interface",
+                    "username": "username",
+                    "password": "password"
+                }
+            },
+            "identifiers": {
+                "title": "Set identifiers for Somfy UAI+",
+                "description": "Set the name and unique ID for this UAI+",
+                "data": {
+                    "unique_id": "Unique ID",
+                    "name": "Name"
+                },
+                "data_description": {
+                    "unique_id": "user-specified unique ID for the device; must be globally unique",
+                    "name": "name of the device"
+                }
+            }
+        }
+    },
+    "options": {
+        "error": {
+            "invalid_target_id": "The target ID provided is not valid. Should be 6-digit hexadecimal, in the format FEFEFE.",
+            "target_id_exists": "The target ID provided has already been configured.",
+            "invalid_group_id": "The group ID provided is not valid. Should be 6-digit hexadecimal, in the format FEFEFE.",
+            "group_id_exists": "The group ID provided has already been configured."
+        },
+        "step": {
+            "init": {
+                "title": "Set UAI+ target/group IDs",
+                "description": "Add or remove target and group IDs.",
+                "data": {
+                    "existing_target_ids": "Current Target IDs",
+                    "existing_group_ids": "Current Group IDs",
+                    "target_id": "New Target ID",
+                    "group_id": "New Group ID"
+                },
+                "data_description": {
+                    "existing_target_ids": "deselect to remove",
+                    "existing_group_ids": "deselect to remove",
+                    "target_id": "specify new target ID as 6-digit hexadecimal",
+                    "group_id": "specify new group ID as 6-digit hexadecimal"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Somfy UAI+",
+    "render_readme": true,
+    "content_in_root": true,
+    "country": [
+        "US"
+    ],
+    "domains": [
+        "binary_sensor",
+        "cover"
+    ],
+    "hide_default_branch": true
+}
