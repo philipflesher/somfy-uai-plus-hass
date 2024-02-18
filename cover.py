@@ -112,6 +112,8 @@ async def async_setup_entry(
     add_entities(covers)
     add_entities(groups)
 
+    await coordinator.async_config_entry_first_refresh()
+
 
 class SomfyCover(CoordinatorEntity, CoverEntity):
     """Somfy UAI+ cover device."""
@@ -227,18 +229,18 @@ class SomfyCover(CoordinatorEntity, CoverEntity):
             self._attr_name = name
             self._attr_device_class = device_class
 
-            closed_percentage = device_state["closed_percentage"]
-            position = 100 - closed_percentage
-            last_position = self.current_cover_position
+            # closed_percentage = device_state["closed_percentage"]
+            # position = 100 - closed_percentage
+            # last_position = self.current_cover_position
 
             self._attr_available = coordinator.is_connection_ready
-            self._attr_current_cover_position = position
-            self._attr_is_closed = position == 0
-            self._attr_is_opening = False
-            self._attr_is_closing = False
-            if last_position is not None and 100 > position > 0:
-                self._attr_is_opening = last_position < position
-                self._attr_is_closing = last_position > position
+            # self._attr_current_cover_position = position
+            # self._attr_is_closed = position == 0
+            # self._attr_is_opening = False
+            # self._attr_is_closing = False
+            # if last_position is not None and 100 > position > 0:
+                # self._attr_is_opening = last_position < position
+                # self._attr_is_closing = last_position > position
 
 
 class SomfyCoverGroup(CoordinatorEntity, CoverEntity):

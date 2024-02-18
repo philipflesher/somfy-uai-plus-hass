@@ -56,7 +56,7 @@ class SomfyUaiPlusCoordinator(DataUpdateCoordinator):
             _LOGGER,
             # Name of the data. For logging purposes.
             name="Somfy UAI+",
-            update_interval=timedelta(milliseconds=1000),
+            update_interval=timedelta(seconds=60),
         )
         self._host: str = host
         self._username: str = username
@@ -136,13 +136,13 @@ class SomfyUaiPlusCoordinator(DataUpdateCoordinator):
                         new_name = info.name
                         new_type = info.type
 
-                    closed_percentage: int = (
-                        await self._telnet_client.async_get_target_position(target_id)
-                    )
+                    # closed_percentage: int = (
+                    #     await self._telnet_client.async_get_target_position(target_id)
+                    # )
                     device_states[target_id] = {
                         "name": new_name,
                         "type": new_type,
-                        "closed_percentage": closed_percentage,
+                        # "closed_percentage": closed_percentage,
                     }
                 except ErrorResponseException as err:
                     _LOGGER.warning(
