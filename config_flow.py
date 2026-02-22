@@ -163,10 +163,6 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
     def _is_6_digit_hexadecimal(s: str) -> bool:
         return len(s) == 6 and all(c in string.hexdigits for c in s)
 
-    def __init__(self, config_entry: config_entries.ConfigEntry) -> None:
-        """Initialize options flow."""
-        self.config_entry = config_entry
-
     async def async_step_init(
         self, user_input: dict[str, any] | None = None
     ) -> FlowResult:
