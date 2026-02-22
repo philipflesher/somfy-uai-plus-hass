@@ -7,6 +7,6 @@
         "somfy-uai-plus-telnet@git+https://github.com/philipflesher/somfy-uai-plus-telnet-py@main#somfy-uai-plus-telnet==0.5.0"
     ],
     "iot_class": "local_polling",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "config_flow": true
 }
